@@ -10,7 +10,7 @@ const index = () => {
       <Text className="text-red-500 bg-blue-50 text-3xl font-Sora-Medium">index</Text>
       <Text className="text-red-500 bg-blue-50 text-3xl font-Sora-SemiBold">index</Text>
       <Text className="text-xl font-bold text-blue-600 font-Sora-Light">
-        Welcome to NativeWind!
+        Welcome to NativeWind! test
       </Text>
     </View>
   )
