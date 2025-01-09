@@ -9,6 +9,7 @@ const index = () => {
     }, 2000);
   },[])
   return (
+
     <View className="bg-black flex-1">
       <Image
         source={require("../assets/images/ws.png")}
@@ -23,6 +24,7 @@ const index = () => {
         </Text>
       </View>
       <StatusBar style="dark" />
+
     </View>
   );
 };
