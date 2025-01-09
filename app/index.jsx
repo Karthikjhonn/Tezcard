@@ -1,19 +1,30 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import "../global.css"
+import { View, Text, Image } from "react-native";
+import React, { useEffect } from "react";
+import { StatusBar } from "expo-status-bar";
+import { router } from "expo-router";
 const index = () => {
+  useEffect(()=>{
+    setTimeout(() => {
+      router.replace("/home");
+    }, 2000);
+  },[])
   return (
-    <View className="p-5"> 
-      <Text className="text-red-500 bg-blue-50 text-3xl font-Space-Mono">index</Text>
-      <Text className="text-red-500 bg-blue-50 text-3xl font-Sora-Light">index</Text>
-      <Text className="text-red-500 bg-blue-50 text-3xl font-Sora-Regular">index</Text>
-      <Text className="text-red-500 bg-blue-50 text-3xl font-Sora-Medium">index</Text>
-      <Text className="text-red-500 bg-blue-50 text-3xl font-Sora-SemiBold">index</Text>
-      <Text className="text-xl font-bold text-blue-600 font-Sora-Light">
-        Welcome to NativeWind!
-      </Text>
+    <View className="bg-black flex-1">
+      <Image
+        source={require("../assets/images/ws.png")}
+        className="object-cover h-fit w-full "
+      />
+      <View className="mx-5 absolute bottom-20">
+        <Text className="text-halfWhite font-Sora-SemiBold text-5xl py-2">
+          Stay in charge of your
+        </Text>
+        <Text className="text-red-500 font-Sora-SemiBold text-5xl">
+          cards securely
+        </Text>
+      </View>
+      <StatusBar style="dark" />
     </View>
-  )
-}
+  );
+};
 
-export default index
+export default index;
